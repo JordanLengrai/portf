@@ -1,0 +1,418 @@
+/* Responsive CSS pour le portfolio style PS5 */
+
+/* Tablettes et petits écrans (jusqu'à 1024px) */
+@media screen and (max-width: 1024px) {
+    body {
+        font-size: 90%;
+    }
+    
+    header {
+        padding: 0.6em 0.8em;
+    }
+    
+    /* Navbar responsive */
+    header .left a, header .right a {
+        margin-right: 40px;
+    }
+    
+    header a {
+        font-size: 1.8em;
+    }
+    
+    header .right img {
+        height: 40px !important;
+    }
+    
+    #carousel {
+        height: 75%;
+        transform: scale(0.9);
+    }
+    
+    #carousel section img {
+        width: 140px;
+    }
+    
+    #carousel .selected section img {
+        width: 200px;
+    }
+    
+    #carousel .selected .game-info .left h1 {
+        font-size: 1.2em;
+        margin: 20px 0;
+    }
+    
+    #carousel .selected .game-info .left .button-left a {
+        font-size: 1.5em;
+    }
+}
+
+/* Smartphones en mode paysage (jusqu'à 768px) */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 85%;
+    }
+    
+    header {
+        padding: 0.5em;
+        transform: scale(0.9);
+    }
+    
+    /* Navbar responsive */
+    header .left a, header .right a {
+        margin-right: 20px;
+    }
+    
+    header a {
+        font-size: 1.5em;
+    }
+    
+    header .right img {
+        height: 35px !important;
+    }
+    
+    header .time {
+        font-size: 0.9em;
+    }
+    
+    #carousel {
+        height: 70%;
+        margin-top: 20px;
+        transform: scale(0.85);
+    }
+    
+    /* Ajustement pour préserver la disposition et éviter le chevauchement */
+    #carousel .hideLeft {
+        opacity: 0.4;
+        transform: translateX(-80%) scale(0.65);
+    }
+    
+    #carousel .hideRight {
+        opacity: 0.4;
+        transform: translateX(80%) scale(0.65);
+    }
+    
+    #carousel .prevLeftSecond {
+        opacity: 0.7;
+        transform: translateX(-50%) scale(0.8);
+    }
+    
+    #carousel .nextRightSecond {
+        opacity: 0.7;
+        transform: translateX(50%) scale(0.8);
+    }
+    
+    #carousel section img {
+        width: 110px;
+    }
+    
+    #carousel .selected section img {
+        width: 160px;
+    }
+    
+    #carousel .selected section span {
+        font-size: 1.1em;
+    }
+    
+    #carousel .selected .game-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #carousel .selected .game-info .right {
+        margin-top: 15px;
+        align-items: center;
+    }
+    
+    /* Masquer l'image à côté du bouton "Voir le projet" */
+    #carousel .selected .game-info .left img {
+        display: none;
+    }
+    
+    /* Centrer les éléments en bas du carrousel */
+    #carousel .selected .game-info {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    #carousel .selected .game-info .left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    #carousel .selected .game-info .left .button-left {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    /* Ajuster la largeur du bouton "Voir le projet" */
+    #carousel .selected .game-info .left .button-left a:nth-child(1) {
+        padding: 10px 60px;
+    }
+    
+    #carousel .selected .game-info .right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+        width: 100%;
+    }
+    
+    #carousel .selected .game-info .right .trophy {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Réduire la taille de l'icône du trophée sur les petits écrans */
+    #carousel .selected .game-info .right .trophy i {
+        font-size: 1.6em;
+    }
+    
+    #carousel .selected .game-info .right .trophy .progress span:nth-child(2),
+    #carousel .selected .game-info .right .trophy .win span:nth-child(2) {
+        font-size: 1.3em;
+    }
+    
+    #carousel .selected .game-info .right .trophy .progress span:nth-child(1),
+    #carousel .selected .game-info .right .trophy .win span:nth-child(1) {
+        font-size: 0.9em;
+    }
+    
+    #carousel .selected .game-info .right .cover {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+}
+
+/* Smartphones en mode portrait (jusqu'à 480px) */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 80%;
+        background-size: cover !important;
+    }
+    
+    header {
+        padding: 0.4em;
+        transform: scale(0.85);
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    header .right, header .left {
+        gap: 10px;
+    }
+    
+    /* Navbar responsive */
+    header .left a, header .right a {
+        margin-right: 15px;
+    }
+    
+    header a {
+        font-size: 1.3em;
+    }
+    
+    header .right img {
+        height: 30px !important;
+    }
+    
+    /* Masquer le texte "Compétences" et ne garder que "CV" */
+    header .left a:nth-child(2) {
+        display: none;
+    }
+    
+    /* Changer le texte "Mon CV" en "CV" */
+    header .left a:nth-child(3) {
+        font-size: 1.2em;
+    }
+    
+    #carousel {
+        height: 65%;
+        margin-top: 10px;
+        transform: scale(0.75);
+    }
+    
+    /* Préserver l'environnement visuel en ajustant les positions et éviter le chevauchement */
+    #carousel .hideLeft {
+        opacity: 0.3;
+        transform: translateX(-90%) scale(0.5);
+    }
+    
+    #carousel .hideRight {
+        opacity: 0.3;
+        transform: translateX(90%) scale(0.5);
+    }
+    
+    #carousel .prevLeftSecond {
+        opacity: 0.6;
+        transform: translateX(-60%) scale(0.7);
+    }
+    
+    #carousel .nextRightSecond {
+        opacity: 0.6;
+        transform: translateX(60%) scale(0.7);
+    }
+    
+    #carousel section img {
+        width: 90px;
+    }
+    
+    #carousel .selected section img {
+        width: 140px;
+    }
+    
+    #carousel .selected section span {
+        font-size: 1em;
+        bottom: 20px;
+    }
+    
+    #carousel .selected .game-info .left h1 {
+        font-size: 1.1em;
+        margin: 15px 0;
+    }
+    
+    #carousel .selected .game-info .left .button-left a {
+        font-size: 1.3em;
+        padding: 5px 10px;
+    }
+}
+
+/* Très petits écrans (jusqu'à 320px) */
+@media screen and (max-width: 320px) {
+    body {
+        font-size: 75%;
+        background-size: cover !important;
+    }
+    
+    header {
+        padding: 0.3em;
+        transform: scale(0.8);
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    /* Navbar responsive */
+    header .left, header .right {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    header .left a, header .right a {
+        margin-right: 10px;
+    }
+    
+    header a {
+        font-size: 1.2em;
+    }
+    
+    header .right img {
+        height: 25px !important;
+    }
+    
+    /* Masquer l'icône de recherche sur très petits écrans */
+    header .right a:nth-child(1) {
+        display: none;
+    }
+    
+    header .time {
+        font-size: 0.8em;
+    }
+    
+    #carousel {
+        height: 60%;
+        transform: scale(0.7);
+    }
+    
+    /* Garder un minimum d'éléments visibles mais réduits et éviter le chevauchement */
+    #carousel .hideLeft {
+        opacity: 0.2;
+        transform: translateX(-100%) scale(0.4);
+    }
+    
+    #carousel .hideRight {
+        opacity: 0.2;
+        transform: translateX(100%) scale(0.4);
+    }
+    
+    #carousel .prevLeftSecond {
+        opacity: 0.5;
+        transform: translateX(-70%) scale(0.6);
+    }
+    
+    #carousel .nextRightSecond {
+        opacity: 0.5;
+        transform: translateX(70%) scale(0.6);
+    }
+    
+    #carousel section img {
+        width: 70px;
+    }
+    
+    #carousel .selected section img {
+        width: 120px;
+    }
+    
+    /* Simplifier l'interface mais garder l'essentiel */
+    #carousel .selected .game-info .left .button-left a {
+        font-size: 1.2em;
+        padding: 4px 8px;
+    }
+    
+    /* Réduire encore plus la taille de l'icône du trophée sur les très petits écrans */
+    #carousel .selected .game-info .right .trophy i {
+        font-size: 1.4em;
+    }
+    
+    #carousel .selected .game-info .right .trophy .progress span:nth-child(2),
+    #carousel .selected .game-info .right .trophy .win span:nth-child(2) {
+        font-size: 1.2em;
+    }
+    
+    #carousel .selected .game-info .right .trophy .progress span:nth-child(1),
+    #carousel .selected .game-info .right .trophy .win span:nth-child(1) {
+        font-size: 0.8em;
+    }
+    
+    /* Ajouter un peu d'espace entre les sections */
+    #carousel .selected .game-info .right .trophy .progress,
+    #carousel .selected .game-info .right .trophy .win {
+        margin-bottom: 5px;
+    }
+}
+
+/* Ajustements pour les écrans en hauteur (mode portrait) */
+@media screen and (max-height: 700px) {
+    #carousel {
+        height: 70%;
+        margin-top: 10px;
+    }
+    
+    #carousel .selected .game-info .left h1 {
+        margin: 15px 0;
+    }
+}
+
+/* Ajustements pour les grands écrans */
+@media screen and (min-width: 1600px) {
+    body {
+        font-size: 110%;
+    }
+    
+    #carousel {
+        height: 85%;
+    }
+    
+    #carousel section img {
+        width: 180px;
+    }
+    
+    #carousel .selected section img {
+        width: 250px;
+    }
+}

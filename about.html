@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jordan Lengrai - À propos & Contact</title>
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="caroussel.css">
+        <link rel="stylesheet" href="responsive.css">
+        <link rel="stylesheet" href="about.css">
+
+        <script src="https://kit.fontawesome.com/0c87a70838.js"
+            crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="left">
+                <a href="index.html" style="font-weight: 100;">Projets</a>
+                <a href="competences.html" style="font-weight: 100;">Compétences</a>
+                <a href="https://jordanlengrai.github.io/MonCV/" target="_blank" rel="noopener noreferrer" style="font-weight: 100;">Mon CV</a>
+            </div>
+            <div class="right">
+                                <a href="about.html" style="color: white;"><i class="fas fa-cog"></i></a>
+                <a href="#"><img src="newimages/profile.jpeg"
+                        style="height: 50px; border-radius: 50px;"></a>
+                <span class="time">JORDAN</span>
+            </div>
+        </header>
+
+        <div class="about-container">
+   
+            <div class="about-section">
+                <div class="section-header">
+                    <i class="fas fa-user"></i>
+                    <h2>À propos de moi</h2>
+                </div>
+                <div class="about-content">
+                    <div class="profile-image">
+                        <img src="newimages/profile.jpeg" alt="Jordan Lengrai">
+                    </div>
+                    <div class="profile-info">
+                        <h3>Jordan Lengrai</h3>
+                        <p class="description">
+                            Actuellement étudiant en Licence 3 Informatique, je suis passionné par le développement logiciel, la cybersécurité, l’intelligence artificielle et les technologies de pointe. Curieux, rigoureux et animé par un véritable goût pour l’apprentissage continu, je m’adapte facilement à tous les langages. J’aime relever des défis techniques et explorer de nouveaux domaines.
+                        </p>
+                        <div class="profile-stats">
+                            <div class="stat">
+                                <span class="value">10+</span>
+                                <span class="label">Projets</span>
+                            </div>
+                            <div class="stat">
+                                <span class="value">3+</span>
+                                <span class="label">Années d'expérience</span>
+                            </div>
+                            <div class="stat">
+                                <span class="value">8+</span>
+                                <span class="label">Technologies</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+      
+            <div class="contact-section">
+                <div class="section-header">
+                    <i class="fas fa-envelope"></i>
+                    <h2>Me contacter</h2>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>lengrai.jordan7@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>France</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Envoyez-moi un message</h3>
+                        <form id="contact-form" action="https://formspree.io/f/xjkrbplw" method="POST">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Votre nom" required> 
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Votre email" required> 
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="subject" name="subject" placeholder="Sujet" required> 
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-paper-plane"></i> Envoyer
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+           
+            $(document).ready(function() {
+                $('.about-section, .contact-section').each(function(index) {
+                    $(this).css({
+                        'opacity': '0',
+                        'transform': 'translateY(20px)'
+                    });
+                    setTimeout(() => {
+                        $(this).css({
+                            'opacity': '1',
+                            'transform': 'translateY(0)',
+                            'transition': 'all 0.5s ease-out'
+                        });
+                    }, 150 * index);
+                });
+            });
+        </script>
+        <div id="form-success" style="display:none;text-align:center;color:#4CAF50;font-size:1.2em;margin-top:10px;">
+            <i class="fas fa-check-circle"></i> Merci pour votre message !
+        </div>
+        <script>
+           
+            const contactForm = document.getElementById('contact-form');
+            if(contactForm){
+              contactForm.addEventListener('submit', function(){
+                setTimeout(function(){
+                  document.getElementById('form-success').style.display = 'block';
+                }, 500);
+              });
+            }
+        </script>
+    </body>
+</html>

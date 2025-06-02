@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+
+
+}
+#ps-intro {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100vw; height: 100vh;
+  background: #000;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.8s cubic-bezier(.4,0,.2,1);
+}
+#ps-intro .ps-logo-text {
+  font-family: 'Poppins', 'Arial Black', Arial, sans-serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 4px 18px #000a, 0 1px 0 #fff2;
+  animation: ps-pop 1.3s cubic-bezier(.4,0,.2,1);
+}
+.ps-j, .ps-o, .ps-r, .ps-d, .ps-a, .ps-n {
+  color: #bfc6d1; /* Bleu-gris sobre PlayStation */
+}
+.ps-dot { color: #fff; margin-left: 0.1em; }
+
+#konami-egg {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.92);
+  align-items: center;
+  justify-content: center;
+  animation: none;
+  transition: opacity 0.6s;
+}
+#konami-egg.show {
+  display: flex;
+  animation: egg-pop 1s cubic-bezier(.4,0,.2,1);
+  opacity: 1;
+}
+.egg-content {
+  color: #bfc6d1;
+  font-family: 'Poppins', 'Arial Black', Arial, sans-serif;
+  font-size: 2.3rem;
+  font-weight: 800;
+  text-align: center;
+  padding: 2.3rem 2rem;
+  border-radius: 24px;
+  background: rgba(30,34,44,0.97);
+  box-shadow: 0 0 60px #0070d1, 0 0 12px #fff2;
+  border: 2px solid #0070d1;
+  letter-spacing: 0.08em;
+  text-shadow: 0 4px 18px #000a, 0 1px 0 #fff2;
+  animation: egg-pop 1s cubic-bezier(.4,0,.2,1);
+}
+.egg-msg {
+  display: block;
+  margin-top: 1.2rem;
+  font-size: 1.2rem;
+  color: #43b047;
+  font-weight: 700;
+}
+@keyframes egg-pop {
+  0% { transform: scale(0.7) rotate(-8deg); opacity:0; }
+  60% { transform: scale(1.08) rotate(6deg); opacity:1; }
+  100% { transform: scale(1) rotate(0deg); opacity:1; }
+}
+
+#ps-intro.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+@keyframes ps-pop {
+  0% { transform: scale(0.6) rotate(-20deg); opacity:0; }
+  50% { transform: scale(1.1) rotate(10deg); opacity:1; }
+  100% { transform: scale(1) rotate(0deg); opacity:1; }
+}
+
+body{
+    font-family: "Poppins";
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    overflow: hidden;
+    font-size: 95%; /* Réduction légère de la taille de la police */
+    padding-top: 0; /* Suppression du padding en haut */
+}
+body::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.50);
+    z-index: -1;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1650px;
+    margin: 0 auto;
+    padding: 0.8em 1em; /* Réduction significative du padding vertical */
+    transform: scale(0.95); /* Légère réduction de la taille */
+}
+header .right,.left{
+    display: flex;
+    align-items: center;
+}
+
+header .left a ,.right a {
+    margin-right: 80px;
+
+}
+
+
+header a{
+    color :#adadad;
+    font-size: 2em;
+    display:flex;
+
+}
+header .right .time{
+    color: white;
+    font-size: 2em;
+    font-weight: 100;
+    margin-right: 10px;
+}
+

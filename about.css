@@ -1,0 +1,289 @@
+/* Style pour la page À propos & Contact dans le style PS5 */
+
+/* Override du style body pour permettre le défilement sur cette page */
+body {
+    overflow: auto !important;
+    overflow-x: hidden !important;
+    height: auto !important;
+    min-height: 100vh;
+    background-color: #0c1824 !important; /* Fond bleu foncé style PS5 */
+    background-image: linear-gradient(to bottom right, rgba(0, 114, 206, 0.2), rgba(0, 0, 0, 0.9)) !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;
+    position: relative;
+}
+
+/* Ajout d'un effet de particules/code pour le fond */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text x="10" y="20" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.05)">function</text><text x="30" y="40" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.05)">const</text><text x="50" y="60" font-family="monospace" font-size="12" fill="rgba(255,255,255,0.05)">{}</text><text x="70" y="80" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.05)">if()</text></svg>');
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    color: white;
+}
+
+.about-section, .contact-section {
+    margin-bottom: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    padding: 25px;
+    backdrop-filter: blur(5px);
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 15px;
+}
+
+.section-header i {
+    font-size: 2em;
+    margin-right: 15px;
+    color: #0072ce; /* Couleur bleue PS5 */
+}
+
+.section-header h2 {
+    font-weight: 300;
+    font-size: 1.8em;
+    margin: 0;
+}
+
+/* Style pour la section À propos */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.profile-image {
+    flex: 0 0 200px;
+}
+
+.profile-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.profile-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.profile-info h3 {
+    font-size: 2em;
+    font-weight: 300;
+    margin: 0 0 5px 0;
+    color: #fff;
+}
+
+.profile-info .title {
+    font-size: 1.2em;
+    color: #0072ce;
+    margin: 0 0 20px 0;
+}
+
+.profile-info .description {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.profile-stats {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.profile-stats .stat {
+    text-align: center;
+}
+
+.profile-stats .value {
+    display: block;
+    font-size: 2em;
+    font-weight: 600;
+    color: #0072ce;
+}
+
+.profile-stats .label {
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Style pour la section Contact */
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-item {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.contact-item i {
+    font-size: 1.5em;
+    margin-right: 15px;
+    color: #0072ce;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 10px 0;
+}
+
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5em;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: #0072ce;
+    transform: translateY(-5px);
+}
+
+/* Style pour le formulaire de contact */
+.contact-form {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.contact-form h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.submit-btn {
+    background-color: #0072ce;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #0086f0;
+}
+
+.success-message {
+    text-align: center;
+    padding: 20px;
+}
+
+.success-message i {
+    font-size: 3em;
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+/* Styles responsifs */
+@media screen and (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .profile-image {
+        flex: 0 0 150px;
+    }
+    
+    .profile-stats {
+        justify-content: center;
+    }
+    
+    .contact-item {
+        min-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section-header i {
+        font-size: 1.5em;
+    }
+    
+    .section-header h2 {
+        font-size: 1.4em;
+    }
+    
+    .profile-stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .social-links {
+        flex-wrap: wrap;
+    }
+}

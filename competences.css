@@ -1,0 +1,160 @@
+/* Style pour la page des compétences dans le style PS5 */
+
+/* Override du style body pour permettre le défilement sur cette page */
+body {
+    overflow: auto !important;
+    overflow-x: hidden !important;
+    height: auto !important;
+    min-height: 100vh;
+    background-color: #0c1824 !important; /* Fond bleu foncé style PS5 */
+    background-image: linear-gradient(to bottom right, rgba(0, 114, 206, 0.2), rgba(0, 0, 0, 0.9)) !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;
+    position: relative;
+}
+
+/* Ajout d'un effet de particules/code pour le fond */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text x="10" y="20" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.05)">function</text><text x="30" y="40" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.05)">const</text><text x="50" y="60" font-family="monospace" font-size="12" fill="rgba(255,255,255,0.05)">{}</text><text x="70" y="80" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.05)">if()</text></svg>');
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.skills-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    color: white;
+}
+
+.skills-section {
+    margin-bottom: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    padding: 20px;
+    backdrop-filter: blur(5px);
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+}
+
+.section-title i {
+    font-size: 1.8em;
+    margin-right: 15px;
+    color: #0072ce; /* Couleur bleue PS5 */
+}
+
+.section-title h2 {
+    font-weight: 300;
+    font-size: 1.6em;
+    margin: 0;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.skill-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 114, 206, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.skill-icon i {
+    font-size: 1.5em;
+    color: #0072ce; /* Couleur bleue PS5 */
+}
+
+.skill-info {
+    flex: 1;
+}
+
+.skill-info h3 {
+    margin: 0 0 8px 0;
+    font-weight: 400;
+    font-size: 1.1em;
+}
+
+.skill-level {
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.level-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #0072ce, #00a6ff);
+    border-radius: 4px;
+    width: 0; /* Sera animé par JavaScript */
+}
+
+/* Styles responsifs */
+@media screen and (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    
+    .section-title i {
+        font-size: 1.5em;
+    }
+    
+    .section-title h2 {
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .skill-item {
+        padding: 10px;
+    }
+    
+    .skill-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .skill-icon i {
+        font-size: 1.2em;
+    }
+    
+    .section-title h2 {
+        font-size: 1.1em;
+    }
+}
